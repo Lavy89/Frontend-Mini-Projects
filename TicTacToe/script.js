@@ -81,16 +81,7 @@ function resetGame() {
   arr.fill(null);
   document.querySelectorAll(".col").forEach((box) => {
     box.innerText = "";
-    box.setAttribute(
-      "aria-label",
-      `${box.id.replace(
-        /(\d)/,
-        (_, d) =>
-          ["top", "middle", "bottom"][Math.floor(d / 3)] +
-          " " +
-          ["left", "center", "right"][d % 3]
-      )} cell`
-    );
+   
   });
 
   currentPlayer = "☀️";
