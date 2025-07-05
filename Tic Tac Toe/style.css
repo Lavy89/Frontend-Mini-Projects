@@ -1,0 +1,134 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .game-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .col {
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    border: 2px solid #333;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+  
+  .col:hover {
+    background-color: #f0f8ff;
+    transform: scale(1.05);
+  }
+  
+  .col:focus {
+    outline: 3px solid #0077ff;
+  }
+  
+  #turnIndicator {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  .winnerSection {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 30px 50px;
+    text-align: center;
+    max-width: 90vw;
+  }
+  
+  .winnerSection::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+  }
+  
+  #winnerText {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #winnerGif {
+    max-width: 200px;
+    margin: 0 auto 20px;
+    display: none;
+    border-radius: 10px;
+  }
+  
+  .resetBtn {
+    padding: 10px 20px;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .resetBtn:hover {
+    background-color: #005fcb;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(3, 70px);
+      gap: 8px;
+    }
+  
+    .col {
+      width: 70px;
+      height: 70px;
+      font-size: 24px;
+    }
+  
+    .winnerSection {
+      padding: 20px;
+    }
+  
+    #winnerText {
+      font-size: 20px;
+    }
+  
+    #winnerGif {
+      max-width: 150px;
+    }
+  }

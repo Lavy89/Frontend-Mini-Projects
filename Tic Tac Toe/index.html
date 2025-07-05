@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☀️Tic Tac Toe🌚</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <main class="container">
+    <h1>☀️ vs  🌚</h1>
+    <div class="game-container" id="gameBoard">
+      <div class="grid">
+        <div onclick="handleClick(this)" id="0" class="col" tabindex="0" aria-label="Top left cell"></div>
+        <div onclick="handleClick(this)" id="1" class="col" tabindex="0" aria-label="Top center cell"></div>
+        <div onclick="handleClick(this)" id="2" class="col" tabindex="0" aria-label="Top right cell"></div>
+        <div onclick="handleClick(this)" id="3" class="col" tabindex="0" aria-label="Middle left cell"></div>
+        <div onclick="handleClick(this)" id="4" class="col" tabindex="0" aria-label="Center cell"></div>
+        <div onclick="handleClick(this)" id="5" class="col" tabindex="0" aria-label="Middle right cell"></div>
+        <div onclick="handleClick(this)" id="6" class="col" tabindex="0" aria-label="Bottom left cell"></div>
+        <div onclick="handleClick(this)" id="7" class="col" tabindex="0" aria-label="Bottom center cell"></div>
+        <div onclick="handleClick(this)" id="8" class="col" tabindex="0" aria-label="Bottom right cell"></div>
+      </div>
+      <p id="turnIndicator">☀️'s turn</p>
+      <button class="resetBtn" onclick="resetGame()">New Game</button>
+    </div>
+  </main>
+
+  <dialog class="winnerSection" id="winnerPopup">
+    <div id="winnerText"></div>
+    <img id="winnerGif" src="" alt="Celebration animation" aria-hidden="true">
+    <button class="resetBtn" onclick="resetGame()">Play Again</button>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
